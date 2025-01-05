@@ -1,0 +1,130 @@
+.lightbox {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    &__close {
+        background: none;
+        align-self: flex-start;
+        margin-left: 95%;
+        margin-top: 2%;
+    }
+    &__image {
+        height: 90%;
+        width: auto;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .lightbox {
+        &__close {
+            margin-left: 91%;
+            margin-top: 1%;
+        }
+        &__image {
+            width: 90%;
+            height: auto;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+
+$color_1: white;
+$font-family_1: 'Space Mono', monospace;
+
+.left-arrow {
+	width: auto;
+	display: flex;
+	align-items: center;
+	.arrow-link {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: $color_1;
+		outline: none;
+		font-family: $font-family_1;
+		font-size: 14px;
+		font-weight: 400;
+		margin: 20px;
+	}
+	>a {
+		>span {
+			&:hover {
+				font-weight: 700;
+			}
+		}
+	}
+	.arrow-img-gauche {
+		filter: invert(100%);
+		margin-right: 10px;
+	}
+	.text {
+		order: 1;
+	}
+}
+.right-arrow {
+	width: auto;
+	display: flex;
+	align-items: center;
+	.arrow-link {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: $color_1;
+		outline: none;
+		font-family: $font-family_1;
+		font-size: 14px;
+		font-weight: 400;
+		margin: 20px;
+	}
+	>a {
+		>span {
+			&:hover {
+				font-weight: 700;
+			}
+		}
+	}
+	.arrow-img-droite {
+		filter: invert(100%);
+		margin-left: 10px;
+		order: 2;
+	}
+}
+
+.info-photo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	>span {
+		padding: 20px;
+		color: $color_1;
+		font-family: $font-family_1;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 21px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase !important;
+	}
+}
